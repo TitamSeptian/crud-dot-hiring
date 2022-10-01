@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        font-family: "Inter", sans-serif;
+    }
+}
+@layer components {
+    /* Button */
+    .btn {
+        @apply inline-block bg-gray-800 border border-gray-800 text-white py-2 px-8 font-semibold hover:bg-gray-600 ring ring-offset-2 ring-transparent focus:ring-gray-800 focus:bg-gray-800 transition-all duration-300 rounded-lg text-center cursor-pointer;
+    }
+
+    .btn-sm {
+        @apply text-sm;
+    }
+
+    .btn-outline {
+        @apply bg-white text-gray-800 hover:bg-gray-200 focus:bg-gray-800 focus:text-white;
+    }
+
+    .btn-blue {
+        @apply bg-blue-700 text-white hover:bg-blue-700 focus:bg-blue-700 focus:text-white ring ring-offset-2 ring-transparent focus:ring-blue-700;
+    }
+
+    .btn-blue-outline {
+        @apply bg-white text-blue-700 hover:bg-blue-700 focus:bg-blue-700 focus:text-white hover:text-white;
+    }
+
+    .btn-icon {
+        @apply h-10 w-10 grid place-items-center text-sm p-0 rounded-xl;
+    }
+    /* End Button */
+
+    /* Input */
+    .select,
+    .input,
+    .textarea {
+        @apply rounded-lg focus:ring focus:ring-offset-2 focus:ring-gray-800 focus:border-gray-800 transition-all duration-300;
+    }
+
+    .checkbox {
+        @apply rounded focus:ring-gray-800 focus:border-gray-800 focus:text-gray-800 checked:text-gray-800 transition-all duration-300;
+    }
+
+    .form-control {
+        @apply grid gap-1;
+    }
+
+    .form-control .label {
+        @apply font-bold text-gray-800;
+    }
+
+    .form-control .invalid {
+        @apply text-red-600 text-sm italic font-medium;
+    }
+    /* End Input */
+
+    /* Table */
+    .thead {
+        @apply bg-gray-50;
+    }
+
+    .th {
+        @apply py-3 px-6 sm:text-sm text-xs font-medium tracking-wider text-left text-gray-800 uppercase whitespace-nowrap;
+    }
+
+    .td {
+        @apply py-4 px-6 sm:text-base text-sm text-gray-500 whitespace-nowrap;
+    }
+    /* End Table */
+    .section-container {
+        @apply px-24 max-w-screen-xl;
+    }
+
+    .table-wrapper {
+    }
+
+    .table-wrapper::-webkit-scrollbar-track {
+        /* -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3); */
+        background-color: transparent;
+        /* background-color: red; */
+    }
+
+    .table-wrapper::-webkit-scrollbar {
+        width: 6px;
+        /* background-color: red; */
+    }
+
+    .table-wrapper::-webkit-scrollbar-thumb {
+        /* background-color: #0b1f41;
+        width: 6px;
+        border-radius: 20px; */
+        background-color: #d6dee1;
+        border-radius: 20px;
+        border: 6px solid transparent;
+        background-clip: content-box;
+    }
+}
