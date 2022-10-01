@@ -15,7 +15,15 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('app');
+    return redirect()->route('login');
 });
 
-Route::resource('category', CategoryController::class);
+Route::middleware(['auth'])->group(function () {
+    Route::get('/home', function () {
+        return view('home', [
+            'category' => \App\Models\Category::all(),
+            'book' => \App\Models\Book::all(),
+        ]);
+    });
+    Route::resource('category', CategoryController::class);
+});

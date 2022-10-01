@@ -28,7 +28,7 @@
                         </span>
                         <div class="grid gap-2">
                             <a href=""
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'dashboard' ? 'bg-gray-100 text-gray-600' : '' }}">
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'home' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bxs-dashboard group-hover:text-gray-600"></i>
                                 <span
@@ -75,7 +75,7 @@
                                     Logout
                                 </span>
                             </a>
-                            <form action="" method="post" id="form-logout">
+                            <form action="{{ route('logout') }}" method="post" id="form-logout">
                                 @csrf
                                 @method('POST')
                             </form>
@@ -98,7 +98,7 @@
                             </a>
                         </div>
                         <div class="flex items-center gap-2 font-semibold text-gray-400 bg-transparent text-md">
-                            <span>User</span>
+                            <span>{{ Auth::user()->name }}</span>
                         </div>
                     </div>
                 </nav>

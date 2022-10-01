@@ -5,8 +5,9 @@
         Categories
     </h1>
     <a href="{{ route('category.index') }}" class="btn btn-sm mb-4 my-4"><i class='bx bx-arrow-back'></i> Back</a>
-    <form action="{{ route('category.edit', $category->id) }}" method="post">
+    <form action="{{ route('category.update', $category->id) }}" method="post">
         @csrf
+        @method('PUT')
         <div class="form-control">
             <label class="label" for="name">Name</label>
             <input class="input" type="text" name="name" id="name" value="{{ old('name') ?? $category->name }}"
