@@ -38,7 +38,7 @@
     .select,
     .input,
     .textarea {
-        @apply rounded-lg focus:ring focus:ring-offset-2 focus:ring-gray-800 focus:border-gray-800 transition-all duration-300;
+        @apply rounded-lg focus:ring focus:ring-offset-2 bg-gray-100 h-10 focus:ring-gray-800 focus:border-gray-800 transition-all duration-300;
     }
 
     .checkbox {

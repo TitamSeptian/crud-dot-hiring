@@ -16,9 +16,6 @@
 </head>
 
 <body>
-    @php
-        $activePage = 'dashboard';
-    @endphp
     <div class="relative min-h-screen overflow-x-hidden">
         <section class="relative flex max-h-screen min-h-screen overflow-hidden">
             {{-- sidebar --}}
@@ -53,7 +50,7 @@
                             </a>
                         </div>
                         <div class="grid gap-2 ">
-                            <a href=""
+                            <a href="{{ route('category.index') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'category' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-building group-hover:text-gray-600"></i>
