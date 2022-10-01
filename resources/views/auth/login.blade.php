@@ -24,17 +24,17 @@
                 @csrf
                 <div class="mt-4">
                     <div class="form-control">
-                        <label class="label" for="name">Email</label>
-                        <input class="input" type="text" name="name" id="name" value="{{ old('name') }}"
-                            required autocomplete="off" autofocus>
-                        @error('name')
+                        <label class="label" for="email">Email</label>
+                        <input class="input" type="text" name="email" id="email" value="" required
+                            autocomplete="off" autofocus>
+                        @error('emails')
                             <span class="invalid">{{ $message }}</span>
                         @enderror
                     </div>
                     <div class="form-control">
                         <label class="label" for="name">Password</label>
-                        <input class="input" type="text" name="password" id="password"
-                            value="{{ old('password') }}" required autocomplete="off" autofocus>
+                        <input class="input" type="password" name="password" id="password" value="" required
+                            autocomplete="off" autofocus>
                         @error('password')
                             <span class="invalid">{{ $message }}</span>
                         @enderror

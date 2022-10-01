@@ -22,6 +22,7 @@
             <h3 class="text-xl font-bold text-center">Register to your account</h3>
             <form action="{{ route('register') }}" method="post">
                 @csrf
+
                 <div class="mt-4">
                     <div class="form-control">
                         <label class="label" for="name">Name</label>

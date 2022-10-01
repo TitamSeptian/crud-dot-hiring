@@ -27,7 +27,7 @@
                             Dashboard
                         </span>
                         <div class="grid gap-2">
-                            <a href=""
+                            <a href="{{ route('home') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'home' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bxs-dashboard group-hover:text-gray-600"></i>
@@ -38,7 +38,7 @@
                             </a>
                         </div>
                         <div class="grid gap-2 ">
-                            <a href=""
+                            <a href="{{ route('book.index') }}"
                                 class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'book' ? 'bg-gray-100 text-gray-600' : '' }}"
                                 id="rooms">
                                 <i
@@ -114,6 +114,8 @@
     </div>
     <script src="https://code.jquery.com/jquery-3.6.1.js" integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
         crossorigin="anonymous"></script>
+    <script src="{{ asset('script.js') }}"></script>
+
     <script>
         function showPreview(event) {
             if (event.target.files.length > 0) {
@@ -127,7 +129,6 @@
         }
         $(document).ready(function() {
             $("body").on("click", "#btn-logout", function() {
-                alert("asd");
                 $("#form-logout").submit();
             });
         });
