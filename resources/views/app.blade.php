@@ -42,7 +42,7 @@
                         </div>
                         <div class="grid gap-2 ">
                             <a href=""
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'post' ? 'bg-gray-100 text-gray-600' : '' }}"
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'book' ? 'bg-gray-100 text-gray-600' : '' }}"
                                 id="rooms">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-repost group-hover:text-gray-600"></i>
@@ -54,7 +54,7 @@
                         </div>
                         <div class="grid gap-2 ">
                             <a href=""
-                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'service' ? 'bg-gray-100 text-gray-600' : '' }}">
+                                class="flex items-center gap-2 px-6 py-4 transition-all duration-300 hover:bg-gray-100 rounded-xl group {{ $activePage == 'category' ? 'bg-gray-100 text-gray-600' : '' }}">
                                 <i
                                     class="text-xl text-gray-400 transition-all duration-300 bx bx-building group-hover:text-gray-600"></i>
                                 <span
